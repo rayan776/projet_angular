@@ -1,0 +1,18 @@
+<div class="containerMeteo">
+
+        <h1 style="text-align: center;"> YYR météo </h1>
+
+        <form #meteoform = "ngForm" (ngSubmit)="onSubmit(meteoform.value)">
+            <app-meteo-recherche (submitted)="onSearch($event)"></app-meteo-recherche>
+        </form>
+
+        <button style="margin-top:50px" class="btn btn-success" (click)="getLocation()"> La météo chez moi </button>
+        
+
+        <div style="margin-top:20px;" class="container mx-auto">
+            <app-meteo *ngIf="meteo$ | async as meteo" [meteo]="meteo"></app-meteo>
+        </div>
+
+       <!--  <pre> {{ meteo$ | async | json }} </pre> -->
+
+</div>

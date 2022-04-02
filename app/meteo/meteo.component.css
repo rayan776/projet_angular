@@ -1,0 +1,53 @@
+#infosMeteo {
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    min-width:300px;
+    background-color: #bcbcff;
+    margin-top:50px;
+}
+
+.card_main {
+    text-align: center;
+    font-size: 20px;
+}
+
+.card_city {
+    font-weight:bold;
+    text-align: center;
+    font-size:20px;
+}
+
+.card_infos {
+    margin-top:15px;
+}
+
+.card_info {
+    text-align: center;
+    border: 1px solid darkblue;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #294a51;
+    color: white;
+    width:100%;
+}
+
+.infoDesc {
+    font-size:18px;
+    font-weight:bold;
+}
+
+.infoVal {
+    font-size:16px;
+
+}
+
+.card_prefs {
+    margin-top:15px;
+}
+
+.card_checkbox input[type=checkbox] {
+    position:relative;
+    left:5px;
+}

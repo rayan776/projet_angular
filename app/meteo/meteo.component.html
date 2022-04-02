@@ -1,0 +1,35 @@
+<div @fade id="infosMeteo">
+
+    <div class="card_city"> 
+        {{ meteo.name }}, {{ meteo.sys.country }} / {{ round(meteo.main.temp) }}°C
+    </div>
+    
+    <div class="card_image">
+        <img style="margin-left:40%" src="{{BASE_URL}}/{{meteo.weather[0].icon}}@2x.png" alt="{{meteo.name}}">
+    </div>
+
+    <div class="card_main"> 
+        {{ meteo.weather[0].main }}
+    </div>
+
+    <div *ngFor="let showProp of showInfos" style="display:flex" class="card_infos">
+
+        <div class="card_info" *ngIf="showProp.show"> 
+            <div class="infoDesc"> {{ showProp.desc }} </div>
+            
+            <div class="infoVal"> {{ getInfo(showProp.variable) }} {{ showProp.unit }} </div>
+        </div>
+
+    </div>
+
+    <div class="card_prefs">
+        <h3 style="text-align: center; padding-top:5px; border-top:1px solid black;"> Afficher... </h3>
+
+        <div class="card_checkbox" *ngFor="let showProp of showInfos" style="display:flex">
+            <p> {{ showProp.name }} </p>
+            <input class="form-check-input" type="checkbox" [(ngModel)]="showProp.show">
+        </div>
+
+    </div>
+    
+</div>

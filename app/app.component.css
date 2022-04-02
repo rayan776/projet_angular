@@ -1,0 +1,8 @@
+.containerMeteo {
+    border: 5px solid #8b8bff33;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #d4f4ff;
+    height:1200px;
+    width:100%;
+}
